@@ -1,0 +1,12 @@
+
+# █░█░█ █▀█ █▀▀ █
+# ▀▄▀▄▀ █▄█ █▀░ █
+
+show=drun
+width=750
+height=400
+prompt=What are you looking for ?
+term=kitty
+insensitive=true
+allow_images=true
+gtk_dark=true

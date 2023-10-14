@@ -1,0 +1,175 @@
+
+/* █░█░█ ▄▀█ █▄█ █▄▄ ▄▀█ █▀█
+   ▀▄▀▄▀ █▀█ ░█░ █▄█ █▀█ █▀▄ */
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 17px;
+}
+
+window#waybar {
+    background-color: rgba(17, 17, 27, 0.2);
+    border-bottom: none;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+#workspaces button {
+    background-color: #313244;
+    border-radius: 5px;
+
+    color: #CDD6F4;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+#workspaces button.active {
+	background-color: #CDD6F4;
+	color: #313244;
+}
+
+#custom-powermenu,
+#clock,
+#clock-date,
+#bluetooth,
+#battery,
+#backlight,
+#network,
+#wireplumber,
+#custom-archmenu,
+#mode,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#custom-archmenu {
+    background-color: #CBA6F7;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #1E1E2E;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 3px;
+}
+
+#custom-powermenu {
+    background-color: #B4BEFE;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #1E1E2E;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+#clock {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#clock.date {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#bluetooth {
+    background-color: #F38BA8;
+    color: #1E1E2E;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;  
+    margin-right: 3px;
+} 
+
+#battery {
+    background-color: #F9E2AF;
+    color: #1E1E2E;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 3px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #1E1E2E;
+    background-color: #F9E2AF;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #1E1E2E;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #F38BA8;
+    color: #1E1E2E;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#backlight {
+    background-color: #94E2D5;
+    border-radius: 5px;
+    color: #1E1E2E;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 3px;
+}
+
+#network {
+    background-color: #FAB387;
+    border-radius: 5px;
+    color: #1E1E2E;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 3px;
+}
+
+#network.disconnected {
+    background-color: #F38BA8;
+}
+
+#wireplumber {
+    background-color: #74C7EC;
+    color: #1E1E2E;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 3px;
+}
+
+#wireplumber.muted {
+    background-color: #F38BA8;
+}
+
+button:hover {
+  background: #CDD6F4;
+  color: #313244;
+}

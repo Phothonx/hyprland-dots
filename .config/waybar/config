@@ -1,0 +1,88 @@
+
+// █░█░█ ▄▀█ █▄█ █▄▄ ▄▀█ █▀█
+// ▀▄▀▄▀ █▀█ ░█░ █▄█ █▀█ █▀▄
+
+{
+    "layer": "top",
+    "height": 50,
+    "spacing": 5,
+    "modules-left": ["custom/archmenu", "hyprland/workspaces"],
+    "modules-center": ["clock", "clock#date"],
+    "modules-right": ["bluetooth", "network", "battery", "backlight", "wireplumber", "custom/powermenu"],
+
+    "custom/archmenu": {
+        "format": " 󰣇 ",
+        "on-click": "sleep 0.1 && wofi --mode drun",
+        "tooltip": false
+    },
+
+    "custom/powermenu": {
+        "format": "  ",
+        "on-click": "sleep 0.1 && nwg-bar",
+        "tooltip": false
+    },
+
+    "battery": {
+        "format": " {icon}  {capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{timeTo}\nPower : {power}\nCapacity : {capacity}",
+        "states": {
+            "critical": 15
+        }
+    },
+
+    "clock": {
+        "format": "  {:%H:%M} ",
+        "tooltip": false,
+    },
+
+    "clock#date": {
+        "format": "  {:%a %d %b} ",
+        "tooltip": false,
+    },
+
+    "bluetooth": {
+        "format": " 󰂯 {status} ",
+        "format-connected": " 󰂱 {device_alias} ",
+        "tooltip-format": "Status : {status}\nConnections :  {num_connections}\nController : {controller_alias} {controller_address_type} {controller_address}\nConnected devices : \n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias} - {device_address_type} {device_address}",
+    },
+
+    "network": {
+        "format": " {ifname} ",
+        "format-wifi": " {icon} {essid} ",
+        "format-icons": ["󰤯", "󰤟","󰤢", "󰤥", "󰤨"],
+        "format-ethernet": " 󰈀 {ipaddr}/{cidr} ",
+        "format-disconnected": " 󰖪 disconnected ",
+        "max-length": 50,
+        "interval": 10,
+        "tooltip-format": "Interface : {ifname} {ipaddr} {gwaddr} {netmask}\nWifi connection : {essid}\nStrenght : {signaldBm}dBm - {signalStrength}%\nFrequecy : {frequency}MHz\nRate : Up {bandwidthUpOctets} - Down {bandwidthDownOctets}",
+    },
+
+
+    "hyprland/workspaces": {
+        
+        "format": "{id}",
+        "on-click": "hyprctl dispatch workspace {id}",
+        "show-special": false,
+    },
+
+    "wireplumber": {
+        "format": " {icon} {volume}% ",
+        "format-bluetooth": " 󰂯 {icon} {volume}% ",
+        "format-muted": " 󰝟 muted ",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""],
+        },
+        "tooltip-format": "Node name : {node_name}",
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    },
+
+    "backlight": {
+        "device": "{intel_backlight}",
+        "format": "  {percent}% ",
+        "tooltip": false,
+        "on-click": "brightnessctl set 50% && echo 50 > /tmp/wobpipe"
+    },
+}

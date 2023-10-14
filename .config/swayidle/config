@@ -1,0 +1,7 @@
+
+# █▀ █░█░█ ▄▀█ █▄█ █ █▀▄ █░░ █▀▀
+# ▄█ ▀▄▀▄▀ █▀█ ░█░ █ █▄▀ █▄▄ ██▄
+
+timeout 540 'swaylock --daemonize --screenshots --effect-blur=8x7'
+timeout 600 'systemctl suspend'
+before-sleep 'swaylock --daemonize --screenshots --effect-blur=8x7'

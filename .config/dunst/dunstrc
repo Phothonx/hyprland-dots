@@ -1,0 +1,95 @@
+
+# █▀▄ █░█ █▄░█ █▀ ▀█▀
+# █▄▀ █▄█ █░▀█ ▄█ ░█░
+
+[global]
+    # monitor = 0
+    follow = keyboard
+    enable_posix_regex = true
+
+    # width = 
+    # height =
+
+    notification_limit = 5
+    origin = top-left
+    offset = 10x10
+    # scale = 0
+
+    # progress_bar = true
+    # progress_bar_horizontal_alignment = center
+    # progress_bar_height = 10
+    # progress_bar_min_width = 150
+    # progress_bar_max_width = 300
+    # progress_bar_frame_width = 1
+    # progress_bar_corner_radius = 0
+
+    # icon_corner_radius = 0
+    # indicate_hidden = true
+    #  transparency = 0
+    separator_height = 2
+    # padding = 8
+    # horizontal_padding = 8
+    # text_icon_padding = 0
+
+    frame_width = 2
+    # gap_size = 0
+    separator_color = frame
+    # sort = true
+    # layer = overlay
+    # force_xwayland = false
+
+    timeout = 3
+
+    font = monospace 13
+    # line_height = 0
+    # format = <b>%s</b>\n%b
+    # vertical_alignment = center
+    # show_age_threshold = 60
+    # ignore_newline = false
+    # stack_duplicates = true
+    # hide_duplicate_count = false
+    # show_indicators = true
+    markup = full
+
+    # enable_recursive_icon_lookup = true
+    # icon_theme = papirus-dark
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/animations/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Papirus-Dark/16x16/categories/:/usr/share/icons/Papirus-Dark/16x16/emblems/:/usr/share/icons/Papirus-Dark/16x16/emotes/:/usr/share/icons/Papirus-Dark/16x16/devices/mimetypes:/usr/share/icons/Papirus-Dark/16x16/panel/:/usr/share/icons/Papirus-Dark/16x16/places/
+
+
+    # idle_threshold = 120
+    # sticky_history = true
+    dmenu = /usr/bin/wofi -p dunst
+    browser = /usr/bin/firefox --new-tab
+
+    min_icon_size = 0
+    max_icon_size = 64
+
+    # always_run_script = true
+
+    # title = Dunst
+    # class = Dunst
+    # force_xinerama = false
+    # corner_radius = 0
+
+    mouse_left_click = do_action
+    mouse_right_click = context
+    # mouse_middle_click = 
+    # ignore_dbusclose = false
+
+    frame_color = "#89B4FA"
+    separator_color= frame
+
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#89B4FA"
+
+[urgency_normal]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#F9E2AF"
+
+[urgency_critical]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#F38BA8"
